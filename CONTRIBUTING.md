@@ -6,7 +6,7 @@ It's awesome that you want to contribute to this service! You can contribute in 
 * Fixing existing bugs
 * Improving documentation and examples
 
-To help you on this journey we've created this document that will guide you through several steps, like: [creating your development environment](#developing-python-chain), [deploying dependencies](#deploying-dependencies) and [running tests](#running-tests).
+To help you on this journey we've created this document that will guide you through several steps, like [creating your development environment](#developing-python-chain), [deploying dependencies](#deploying-dependencies) and [running tests](#running-tests).
 
 ## Table of contents
 
@@ -49,7 +49,7 @@ Our entire source code is inside the `chain` folder. Everything else is just fol
 
 ### Core Folder
 
-You can find it on the following path: `<root>/chain/core`. There, you'll find every code of our core module. The code base is organized in the following sections (folders):
+You can find it on the following path: `<root>/chain/core`. There, you'll find every code of our core module. The codebase is organized in the following sections (folders):
 
 * `domains` - All the domains of the application.
 
@@ -59,7 +59,7 @@ Most of the magic happens on the `domains` section. There's no pattern of file n
 
 You can find it on the following path: `<root>/chain/tests`. There, you'll find all the unit tests that are currently active. We're using [Pytest](https://docs.pytest.org/en/latest/) for the unit tests and [Behave](https://behave.readthedocs.io/en/latest/) to acceptance tests. Please, read their docs before creating new tests.
 
-All unit tests are organized mimicking the strucutre of the chain folders. The acceptance tests are organized inside the `acceptance` folder and divided by features.
+All unit tests are organized mimicking the structure of the chain folders. The acceptance tests are organized inside the `acceptance` folder and divided by features.
 
 ## Deploying Dependencies
 
@@ -109,4 +109,4 @@ In order to keep a good, usable and maintainable code we need to document every 
 
 ## Versioning
 
-We use [SemVer 2.0.0](https://semver.org/) for versioning our releases. Also, we recommend you to use the [Python Black](https://github.com/python/black) formatter. We've created a script to do it for you. You can run the `make black` command before committing your code.
+We use [SemVer 2.0.0](https://semver.org/) for versioning our releases. Also, we recommend you to use the [Python Black](https://github.com/python/black) format. We've created a script to do it for you. You can run the `make black` command before committing your code.
