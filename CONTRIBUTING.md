@@ -76,7 +76,7 @@ Now, with all the dependencies installed, you can follow the installation steps 
 
 ### 1. Clone the project
 ```
-$ git clone git@github.com:odelucca/python-chain.git
+$ git clone git@github.com:quintoandar/python-chain.git
 $ cd python-chain
 ```
 
