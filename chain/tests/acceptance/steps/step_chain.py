@@ -125,11 +125,10 @@ def step_create_decorated_function(context: dict) -> None:
     expected_output = context.fake.pydict()
 
     @chain
-    def dummy(context: State) -> None:
-        return context.expected_output
+    def dummy(context: State, expected_output=expected_output) -> None:
+        return expected_output
 
     context.expected_output = expected_output
-    context.initial_state.expected_output = expected_output
     context.chain = [chain(dummy)]
 
 

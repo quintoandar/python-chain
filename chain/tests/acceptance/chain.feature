@@ -13,6 +13,11 @@ Feature: Chain
      When I run the chain
      Then the first result context must be my initial state
 
+  Scenario: Direct function call
+    Given a decorated chain function with output
+     When I run the first function on the chain directly
+     Then the direct call result must match the output
+
   Scenario: Get the output from a chain
     Given a new empty state
       And a dummy chain function

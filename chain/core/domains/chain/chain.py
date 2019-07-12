@@ -24,6 +24,9 @@ class Chain:
         self.initial_state = deepcopy(initial_state)
         self.function = function
 
+    def __call__(self, *args, **kwargs) -> any:
+        return self.function(context=self.initial_state, *args, **kwargs)
+
     def __split_output(self, output: any) -> tuple:
         return output if type(output) == tuple else (tuple(), dict())
 

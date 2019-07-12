@@ -75,6 +75,33 @@ def test_execute(fake: Faker, Context: MagicMock = None, **kwargs) -> None:
     assert result == context
 
 
+@patch.multiple(file_path, **dependencies.to_dict())
+def test_call(fake: Faker, **kwargs) -> None:
+    """Test the Direct Call of a Chain.
+
+    Ensures that we can execute a chain function directly.
+
+    """
+    # Given
+    expected = fake.pydict()
+    initial_state = fake.pydict()
+    kwargs = fake.pydict()
+    args = fake.pytuple()
+    function = MagicMock(return_value=expected)
+
+    chain = Chain(function)
+
+    chain.initial_state = initial_state
+
+    # When
+    result = chain(*args, **kwargs)
+
+    # Then
+    function.assert_called_once_with(context=initial_state, *args, **kwargs)
+
+    assert result == expected
+
+
 if __name__ == "__main__":
     args = [__file__] + [arg for arg in argv[1:]]
     main(args)

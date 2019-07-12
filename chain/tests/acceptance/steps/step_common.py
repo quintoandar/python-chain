@@ -63,6 +63,21 @@ def step_run_chain(context: dict) -> None:
     context.results.append(result)
 
 
+@when("I run the first function on the chain directly")
+def step_run_first_chain_directly(context: dict) -> None:
+    """Run the First Function in the Chain.
+
+    This step will run the first function in the chain directly.
+
+    """
+    result = context.chain[0]()
+
+    if 'results' not in context:
+        context.results = list()
+
+    context.results.append(result)
+
+
 @when("I reset the state")
 def step_reset_state(context: dict) -> None:
     """Reset the Current State.
@@ -91,3 +106,14 @@ def step_check_output(context: dict) -> None:
 
     """
     assert context.results[0].output == context.expected_output
+
+
+@then("the direct call result must match the output")
+def step_check_output_of_direct_call(context: dict) -> None:
+    """Check if We Can Get the Function Output Directly.
+
+    This step will check if, when running the function directly, we can get the
+    desired output.
+
+    """
+    assert context.results[0] == context.expected_output
