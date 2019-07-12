@@ -94,7 +94,7 @@ Now, your module is good to go! And you can start debugging it.
 
 ## Running Tests
 
-Since our application is TDD all code must have automated chain.tests. Please, be aware to not "overtest" it too. You should focus on **integration** and **acceptance** tests and write **unit** tests only when a function really needs it. You can see a pretty good article about it [here](https://kentcdodds.com/blog/write-tests).
+Since our application is TDD all code must have automated tests. Please, be aware to not "overtest" it too. You should focus on **integration** and **acceptance** tests and write **unit** tests only when a function really needs it. You can see a pretty good article about it [here](https://kentcdodds.com/blog/write-tests).
 
 On this application, we're using [Pytest](https://docs.pytest.org/en/latest/) as our unit test framework and [Behave](https://behave.readthedocs.io/en/latest/) as our behavior test framework. You can run them with:
 
