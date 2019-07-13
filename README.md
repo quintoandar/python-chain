@@ -4,7 +4,7 @@
   <br>
 </p>
 <p align="center">
-An easy to use pattern of function chaining on Python.
+An easy to use function chaining pattern on Python.
 </p>
 
 ## 📖 About this Project
