@@ -1,0 +1,8 @@
+# Extends the common requirements and specifies development-specific requirements
+
+-r common.txt
+
+pytest==4.6.3
+behave==1.2.6
+faker==1.0.7
+black==19.3.b0

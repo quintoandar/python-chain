@@ -1,0 +1,3 @@
+# Extends the common requirements and specifies production-specific requirements
+
+-r common.txt
