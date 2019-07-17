@@ -18,6 +18,8 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/quintoandar/python-chain/",
     packages=find_packages(exclude=("tests",)),
+    include_package_data=True,
+    test_suite='nose.collector',
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",
