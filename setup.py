@@ -8,7 +8,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name='chain',
+    name='python-chain',
     version='1.0.0',
     scripts=['bin/build_chain.py'] ,
     author="QuintoAndar",

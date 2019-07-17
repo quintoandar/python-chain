@@ -33,3 +33,4 @@ class Chain(ModuleType):
 
 
 modules[__name__].__class__ = Chain
+__version__ = "1.0.0"
