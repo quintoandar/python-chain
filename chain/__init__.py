@@ -10,6 +10,8 @@ from types import ModuleType
 from chain.core.domains.state import State
 from chain.core.domains.chain import Decorator
 
+__version__ = "1.0.1"
+
 
 class Chain(ModuleType):
     """Default Chain Class.
@@ -33,4 +35,3 @@ class Chain(ModuleType):
 
 
 modules[__name__].__class__ = Chain
-__version__ = "1.0.0"

@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='python-chain',
-    version='1.0.0',
+    version='1.0.1',
     scripts=['bin/build_chain.py'] ,
     author="QuintoAndar",
     author_email="daniel.fonseca@quintoandar.com.br",
@@ -17,9 +17,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/quintoandar/python-chain/",
-    packages=find_packages(exclude=("tests",)),
-    include_package_data=True,
-    test_suite='nose.collector',
+    packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",
