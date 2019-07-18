@@ -116,8 +116,8 @@ def step_create_autoincrementing_chain(context: dict) -> None:
 
 
 @given("a decorated chain function with output")
-def step_create_decorated_function(context: dict) -> None:
-    """Create a New Decorated Chain Function.
+def step_create_decorated_function_with_output(context: dict) -> None:
+    """Create a New Decorated Chain Function With Output.
 
     This step will generate a new decorated chain function.
 
@@ -128,8 +128,31 @@ def step_create_decorated_function(context: dict) -> None:
     def dummy(context: State, expected_output=expected_output) -> None:
         return expected_output
 
+    if 'chain' not in context:
+        context.chain = list()
+
     context.expected_output = expected_output
-    context.chain = [chain(dummy)]
+    context.chain.append(dummy)
+
+
+@given("a decorated chain function without output")
+def step_create_decorated_function_without_output(context: dict) -> None:
+    """Create a New Decorated Chain Function Without Output.
+
+    This step will generate a new decorated chain function without adding an output.
+
+    """
+    expected_output = context.fake.pydict()
+
+    @chain
+    def bar(context: State) -> None:
+        context.bar = 'bar'
+
+    if 'chain' not in context:
+        context.chain = list()
+
+    context.expected_output = expected_output
+    context.chain.append(bar)
 
 
 @when("I reverse the chain")

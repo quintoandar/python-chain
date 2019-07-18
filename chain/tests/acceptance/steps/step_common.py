@@ -59,7 +59,7 @@ def step_run_chain(context: dict) -> None:
     if "results" not in context:
         context.results = list()
 
-    result = reduce(lambda a, b: a > b, to_execute)
+    result = reduce(lambda a, b: a >> b, to_execute)
     context.results.append(result)
 
 

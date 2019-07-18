@@ -106,7 +106,7 @@ def test_method_clear(fake: Faker, **kwargs) -> None:
 
 
 @patch.multiple(file_path, **dependencies.to_dict())
-def test_chain_gt_return(fake: Faker, Context: MagicMock = None, **kwargs) -> None:
+def test_chain_rshift_return(fake: Faker, Context: MagicMock = None, **kwargs) -> None:
     """Test if State is Chainable.
 
     Ensures that we can insert the state in a chain.
@@ -117,7 +117,7 @@ def test_chain_gt_return(fake: Faker, Context: MagicMock = None, **kwargs) -> No
     state = State()
 
     # When
-    result = state > next
+    result = state >> next
 
     # Then
     Context.assert_called_once_with(state=state, origin=next)

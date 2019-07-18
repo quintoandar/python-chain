@@ -24,7 +24,7 @@ class Context:
         self.merge_context(origin.initial_state)
         self.__autorun()
 
-    def __gt__(self, next) -> any:
+    def __rshift__(self, next) -> any:
         return next.execute(context=self)
 
     def __autorun(self) -> None:

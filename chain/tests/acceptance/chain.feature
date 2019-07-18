@@ -1,7 +1,8 @@
 Feature: Chain
 
   Scenario: Common Usage
-    Given a new dirty state
+    Given a new empty state
+      And a decorated chain function without output
       And a decorated chain function with output
      When I run the chain
      Then the first result must have the desired output
