@@ -19,7 +19,7 @@ class State:
     def __init__(self, **initial_state: dict) -> ClassVar:
         self.__dict__.update(initial_state)
 
-    def __gt__(self, next) -> any:
+    def __rshift__(self, next) -> any:
         return Context(state=self, origin=next)
 
     def clear(self) -> None:

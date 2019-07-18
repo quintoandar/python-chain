@@ -66,7 +66,7 @@ def test_gt(fake: Faker, **kwargs) -> None:
     context = Context(fake_state, fake_origin)
 
     # When
-    result = context > fake_next
+    result = context >> fake_next
 
     # Then
     mocked_execute.assert_called_once_with(context=context)

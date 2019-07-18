@@ -13,7 +13,7 @@ Chaining functions is a common functional development pattern that is pretty dif
 
 With **python-chain** you can create an initial state and execute a chain of functions, nourishing that state during the pipeline, like this:
 
-![Code sample](https://i.imgur.com/BmuABfE.png)
+![Code sample](https://i.imgur.com/IHRr4C7.png)
 
 ## 🤖 Getting Started
 
@@ -41,7 +41,7 @@ import chain
 def some_pretty_func(state):
   ...
 
-# Now you can chain that function with the operator >
+# Now you can chain that function with the operator>>
 ```
 
 #### Using State
@@ -90,7 +90,7 @@ def add_houses(context):
 
   context.houses = houses
 
-result = chain.state() > add_houses > calculate_average
+result = chain.state() >> add_houses >> calculate_average
 print(result.current)
 #
 # {
@@ -120,7 +120,7 @@ def get_name(context):
 def add_user(context):
   context.name = 'foo'
 
-result = chain.state() > add_user > get_name
+result = chain.state() >> add_user >> get_name
 print(result.output)
 #
 # 'foo'
@@ -146,7 +146,7 @@ def add_result(context):
 
   return args, kwargs
 
-result = chain.state() > add_result > store_result
+result = chain.state() >> add_result >> store_result
 print(result.current)
 #
 # {
