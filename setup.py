@@ -9,7 +9,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='python-chain',
-    version='1.0.2',
+    version='1.0.3',
     scripts=['bin/build_chain.py'] ,
     author="QuintoAndar",
     author_email="daniel.fonseca@quintoandar.com.br",
