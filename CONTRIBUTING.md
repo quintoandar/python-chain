@@ -103,10 +103,6 @@ $ pytest
 $ behave
 ```
 
-## Documenting
-
-In order to keep a good, usable and maintainable code we need to document every part of our code. We're currently using [Sphinx](http://www.sphinx-doc.org/en/master/) with [Read the Docs](https://readthedocs.org) for visualization.
-
 ## Versioning
 
 We use [SemVer 2.0.0](https://semver.org/) for versioning our releases. Also, we recommend you to use the [Python Black](https://github.com/python/black) format. We've created a script to do it for you. You can run the `make black` command before committing your code.

@@ -23,8 +23,8 @@ On this section, you'll learn all the prerequisites and basic knowledge in order
 
 You can install it using **pip**, running:
 
-```
-$ pip install python-chain
+``` sh
+pip install python-chain
 ```
 
 ### Common Usage
@@ -33,7 +33,7 @@ $ pip install python-chain
 
 You can chain functions by decorating them with the `@chain` decorator. Like the following:
 
-```
+``` python
 import chain
 
 
@@ -48,7 +48,7 @@ def some_pretty_func(state):
 
 Every chain has a `state`. That state is an Object with immutable attributes. The current Chain state will be passed automatically on the keyword argument **context**. Every chain should start with a given state, even if it empty. You can create a new one by using:
 
-```
+``` python
 import chain
 
 state = chain.state()
@@ -56,7 +56,7 @@ state = chain.state()
 
 If you want to feed data into your initial state, you can pass then as kwargs. The key-value pair on the kwargs of your state will be passed as attributes on your chain context. Like so:
 
-```
+``` python
 import chain
 
 state = chain.state(foo='bar')
@@ -72,7 +72,7 @@ def test_chain(context):
 
 Every mutation that you do in a chain function will add it to the next function. You can merge what you have learned both on states and functions by following:
 
-```
+``` python
 import chain
 
 @chain
@@ -109,7 +109,7 @@ If you don't return anything on your final chain function it will automatically 
 
 Every time a chain is finished, it will automatically return its context. You can also add an output by retuning the data that you want on the last step of the chain, like this:
 
-```
+``` python
 import chain
 
 @chain
@@ -131,7 +131,7 @@ print(result.output)
 
 You can pass any args or kwargs directly to the next function. They should be passed returning a tuple with all the args on the first argument and the kwargs on the second. You can do so like this:
 
-```
+``` python
 import chain
 
 @chain
@@ -157,8 +157,6 @@ print(result.current)
 ```
 
 **Be careful**. This would create a **strong dependency** between those two functions. Chain will always pass the args and kwargs that you've created and it will break the chain if the next function doesn't accept those params. Also, always set a state params, because it will be passed by the Chain with the current state.
-
-To learn more the lib you can read our [full docs]().
 
 ## ✍️ Contributing
 
