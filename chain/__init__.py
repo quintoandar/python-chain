@@ -11,7 +11,7 @@ from injectable import InjectionContainer
 from chain.core.domains.state import State
 from chain.core.domains.chain import Decorator
 
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 
 InjectionContainer.load()
 
