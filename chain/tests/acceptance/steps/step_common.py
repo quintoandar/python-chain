@@ -72,7 +72,7 @@ def step_run_first_chain_directly(context: dict) -> None:
     """
     result = context.chain[0]()
 
-    if 'results' not in context:
+    if "results" not in context:
         context.results = list()
 
     context.results.append(result)

@@ -5,9 +5,13 @@ create some useful methods to be used during a chain.
 
 """
 from typing import ClassVar
+
+from injectable import injectable
+
 from chain.core.domains.context import Context
 
 
+@injectable(namespace="python-chain")
 class State:
     """State Class.
 

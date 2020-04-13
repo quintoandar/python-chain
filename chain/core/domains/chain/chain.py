@@ -4,8 +4,8 @@ The chain creates a Chain class that will handle the core methods to create chai
 functions using our lib.
 
 """
-from typing import ClassVar, Callable
-from injectable import autowired
+from typing import Callable
+from injectable import autowired, Autowired
 from copy import deepcopy
 from chain.core.domains.state import State
 from chain.core.domains.context import Context
@@ -20,7 +20,11 @@ class Chain:
     """
 
     @autowired
-    def __init__(self, function: Callable, *, initial_state: State) -> ClassVar:
+    def __init__(
+        self,
+        function: Callable,
+        initial_state: Autowired(State, namespace="python-chain"),
+    ):
         self.initial_state = deepcopy(initial_state)
         self.function = function
 

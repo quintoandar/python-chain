@@ -128,7 +128,7 @@ def step_create_decorated_function_with_output(context: dict) -> None:
     def dummy(context: State, expected_output=expected_output) -> None:
         return expected_output
 
-    if 'chain' not in context:
+    if "chain" not in context:
         context.chain = list()
 
     context.expected_output = expected_output
@@ -146,9 +146,9 @@ def step_create_decorated_function_without_output(context: dict) -> None:
 
     @chain
     def bar(context: State) -> None:
-        context.bar = 'bar'
+        context.bar = "bar"
 
-    if 'chain' not in context:
+    if "chain" not in context:
         context.chain = list()
 
     context.expected_output = expected_output

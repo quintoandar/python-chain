@@ -7,10 +7,13 @@ use our packages.
 """
 from sys import modules
 from types import ModuleType
+from injectable import InjectionContainer
 from chain.core.domains.state import State
 from chain.core.domains.chain import Decorator
 
 __version__ = "1.0.3"
+
+InjectionContainer.load()
 
 
 class Chain(ModuleType):
