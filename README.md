@@ -77,7 +77,7 @@ import chain
 
 @chain
 def calculate_average(context, type='meter'):
-  nbs = [house.get(type) for house in state.houses]
+  nbs = [house.get(type) for house in context.houses]
 
   context.avg = sum(nbs) / len(nbs)
 
