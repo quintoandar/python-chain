@@ -8,4 +8,4 @@ faker==1.0.7
 black==19.3.b0
 bumpversion==0.5.3
 twine==1.13.0
-wheel==0.33.4
+wheel==0.38.1
