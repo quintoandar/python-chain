@@ -7,6 +7,7 @@
 An easy to use function chaining pattern on Python.
 </p>
 
+Testing check runs
 ## 📖 About this Project
 
 Chaining functions is a common functional development pattern that is pretty difficult on Python. Usually, we need to pass some data through a pipeline, process or series of functions in order to get a specific output. Without this lib, you would need to wrap those functions on a class or assign each result on a variable.
